@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Notes</title>
+    <style>
+        .container {
+            /* height: 100vh ; */
+            height: 100%;
+        }
+
+        .btn {
+            border: 1px solid #0dcaf0;
+            color: #0dcaf0;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: #0dcaf0;
+        }
+
+        .foot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* background-color: black; */
+            color: white;
+            height: 190px;
+        }
+
+        .fa {
+            margin: 20px 20px;
+            color: white;
+            transition: .3s all;
+        }
+
+        .fa:hover{
+            color: #0dcaf0;
+        }
+
+        .icons {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-info" href="#">My Notes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+        <h2 class="my-3">Welcome to My Notes</h2>
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-3">
+                    <h5 class="card-title">Add a Title</h5>
+                    <textarea type="text" class="form-control my-3" id="addTitle" rows="1"
+                        placeholder="Enter Title"></textarea>
+                </div>
+
+                <h5 class="card-title">Add a Note</h5>
+                <div class="form-floating">
+                    <textarea class="form-control my-3" placeholder="Leave a comment here" id="addTxt"></textarea>
+                    <label for="floatingTextarea">Write Note Here</label>
+                </div>
+                <button class="btn" id="addBtn">Add Note</button>
+            </div>
+        </div>
+        <hr>
+        <h2 class="my-3">Your Notes</h2>
+        <hr>
+        <div id="notes" class="row container-fluid">
+
+        </div>
+    </div>
+    <!-- <button type="button" class="btn my-1 btn-sm" id="${index+1}" onclick="add(this.id)">Add Highlight</button>
+    <button type="button" class="btn my-1 btn-sm" id="${index+1}" onclick="remove(this.id)">Remove Highlight</button> -->
+    <!--     
+    <span style="font-size:300%;color:yellow;">&starf;</span>
+    <span style="font-size:500%;color:red;">&star;</span>
+    <span style="font-size:500%;color:blue;">&bigstar;</span> -->
+
+    <footer class="foot bg-dark">
+        Copyright &copy; www.mynotes.netlify.app <br> Designed by Jenish Mor
+        <div class="icons">
+            <a href="https://www.facebook.com/jenish.mor"><i class="fa fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/jenishmor__273"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/jenish-mor-48a84b20b"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/JenishMor"> <i class="fa fa-github fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+
+</html>
